@@ -1,4 +1,5 @@
 name: Build and Deploy
+
 on:
   push:
     branches:
@@ -15,15 +16,14 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
-  deploy:
-    name: Deploy
-    needs: build
+
+  deploy_to_firebase_hosting:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
+      - name: Checkout the repository
         uses: actions/checkout@master
       - name: Deploy to Firebase
-        uses: KateGaw/ChatProject@master
+        uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting
         env:
