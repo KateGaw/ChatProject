@@ -17,8 +17,4 @@ jobs:
     - name: Firebase
       run: npm install firebase
     - name: Deploy to Firebase
-      run: firebase deploy
-      env:
-        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-        FIREBASE_PROJECT: chat
-        TARGET_BRANCH: master
+      run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
