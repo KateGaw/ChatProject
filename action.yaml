@@ -1,9 +1,0 @@
-name: 'Chat project'
-author: 'Kate Gaw'
-description: ''
-branding:
-  icon: 'package'
-  color: 'gray-dark'
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
