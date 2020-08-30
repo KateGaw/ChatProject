@@ -25,7 +25,7 @@ function App() {
       {messages !== null ? (
         Object.keys(messages).map((item) => (
           <div key={item} id={item}>
-            {messages[item]}
+            message: {messages[item]}
           </div>
         ))
       ) : (
